@@ -2,10 +2,7 @@
 using ConsoleApp1.Models;
 
 List<User> users = new();
-List<Television> televisions = new();
 List<Payments> payments = new();
-List<Computer> computer = new();
-List<Telephone> telephones = new();
 List<ProductType> productTypes = new();
 var productType = new ProductType
 {
