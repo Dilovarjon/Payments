@@ -10,8 +10,8 @@ namespace ConsoleApp1
             
             var paymentTovar = tovar.CalculatePayment(rangePayments);
             user.Id = new Guid();
-            user.phoneNumber = phoneNumber;
-            user.Payment = sum + (sum * paymentTovar);
+            user.PhoneNumber = phoneNumber;
+            user.Debtor = sum + (sum * paymentTovar);
             user.Product = tovar;
             return user;
         }

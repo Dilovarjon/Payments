@@ -2,7 +2,6 @@
 using ConsoleApp1.Models;
 
 List<User> users = new();
-List<Payments> payments = new();
 List<ProductType> productTypes = new();
 var productType = new ProductType
 {
@@ -21,5 +20,7 @@ var products = new List<Product>
 
 var payment = new PaymentsService();
 var user = payment.Payment(products.FirstOrDefault(), 3000, "12345678", 3);
-
-Console.WriteLine($"{user.Id} - {user.ProductId} - {user.Payment} - {user.phoneNumber} - {user.Product.Name}");
+users.Add(user);
+Console.WriteLine($"{user.Id} - {user.ProductId} - {user.Debtor} - {user.PhoneNumber} - {user.Product.Name}");
+var Installment = new InstallmentPayments();
+users.Append(Installment.InstallmentPayment(300,user));
